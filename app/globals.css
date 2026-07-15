@@ -162,17 +162,22 @@ a:hover {
   .grid-testimonials,
   .grid-4,
   .grid-3-plain {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .split-philosophy,
   .split-doctor,
   .split-map,
   .booking-split,
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .booking-fields {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* the textarea spans 2 cols on desktop — reset so it doesn't spawn a phantom
+     second column (which was clipping the form) when the grid stacks */
+  .booking-fields > * {
+    grid-column: auto !important;
   }
   .therapy-row {
     grid-template-columns: 1fr !important;

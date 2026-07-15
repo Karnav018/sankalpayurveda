@@ -55,11 +55,8 @@ export default function AboutPage() {
 
         {/* Story */}
         <section
-          className="split split-doctor"
-          style={{
-            padding: "clamp(70px,11vh,140px) 6vw",
-            gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)",
-          }}
+          className="split split-philosophy"
+          style={{ padding: "clamp(70px,11vh,140px) 6vw" }}
         >
           <div data-reveal>
             <div style={{ fontSize: 12, letterSpacing: ".28em", color: "var(--gold-brown)", marginBottom: 22 }}>
