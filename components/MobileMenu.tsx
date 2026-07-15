@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks, CONTACT } from "@/lib/data";
 import { serif, gujarati } from "@/lib/fonts";
+import Logo from "@/components/Logo";
 
 export default function MobileMenu() {
   return (
@@ -41,10 +42,13 @@ export default function MobileMenu() {
             marginBottom: 42,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-            <span style={{ fontFamily: serif, fontSize: 24, color: "var(--cream)" }}>Sankalp</span>
-            <span style={{ fontSize: 9, letterSpacing: ".42em", color: "#8A9584", marginTop: 4 }}>
-              A Y U R V E D A
+          <div style={{ display: "flex", alignItems: "center", gap: 10, color: "var(--cream)" }}>
+            <Logo size={30} />
+            <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+              <span style={{ fontFamily: serif, fontSize: 24, color: "var(--cream)" }}>Sankalp</span>
+              <span style={{ fontSize: 9, letterSpacing: ".42em", color: "#8A9584", marginTop: 4 }}>
+                A Y U R V E D A
+              </span>
             </span>
           </div>
           <div id="mobclose" style={{ fontSize: 34, lineHeight: 1, color: "var(--gold)", cursor: "pointer" }}>

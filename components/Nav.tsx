@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 import { serif } from "@/lib/fonts";
+import Logo from "@/components/Logo";
 
 /**
  * Fixed, transparent-over-hero header. Turns solid on scroll (see SiteEffects).
@@ -28,10 +29,13 @@ export default function Nav({ active }: { active?: string }) {
         transition: "background .5s ease, padding .5s ease, color .5s ease",
       }}
     >
-      <Link href="/" style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-        <span style={{ fontFamily: serif, fontSize: 27, letterSpacing: ".02em" }}>Sankalp</span>
-        <span style={{ fontSize: 10, letterSpacing: ".42em", opacity: 0.85, marginTop: 4 }}>
-          A Y U R V E D A
+      <Link href="/" style={{ display: "flex", alignItems: "center", gap: 11 }}>
+        <Logo size={34} />
+        <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+          <span style={{ fontFamily: serif, fontSize: 27, letterSpacing: ".02em" }}>Sankalp</span>
+          <span style={{ fontSize: 10, letterSpacing: ".42em", opacity: 0.85, marginTop: 4 }}>
+            A Y U R V E D A
+          </span>
         </span>
       </Link>
 

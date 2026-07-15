@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks, CONTACT } from "@/lib/data";
 import { serif, gujarati } from "@/lib/fonts";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -16,6 +17,9 @@ export default function Footer() {
         style={{ paddingBottom: 56, borderBottom: "1px solid rgba(201,198,184,.15)" }}
       >
         <div>
+          <div style={{ color: "var(--gold)", marginBottom: 14 }}>
+            <Logo size={40} />
+          </div>
           <div style={{ fontFamily: serif, fontSize: 30, color: "var(--cream)" }}>Sankalp Ayurved</div>
           <div style={{ fontSize: 10, letterSpacing: ".42em", color: "#8A9584", margin: "6px 0 20px" }}>
             C L I N I C

@@ -119,15 +119,19 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+      {/* Centered via left/right + text-align (NOT translateX) — the drift
+          animation overwrites `transform`, which would knock it off-centre. */}
       <div
         style={{
           position: "absolute",
           bottom: 26,
-          left: "50%",
-          transform: "translateX(-50%)",
+          left: 0,
+          right: 0,
+          textAlign: "center",
           color: "var(--cream)",
           fontSize: 11,
           letterSpacing: ".3em",
+          textIndent: ".3em",
           opacity: 0.7,
           animation: "drift 3s ease-in-out infinite",
           fontFamily: sans,

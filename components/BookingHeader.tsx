@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 import { serif } from "@/lib/fonts";
+import Logo from "@/components/Logo";
 
 /** Solid, sticky header used on pages without a hero (Booking). */
 export default function BookingHeader() {
@@ -20,10 +21,13 @@ export default function BookingHeader() {
         borderBottom: "1px solid rgba(46,64,52,.1)",
       }}
     >
-      <Link href="/" style={{ display: "flex", flexDirection: "column", lineHeight: 1, color: "var(--green)" }}>
-        <span style={{ fontFamily: serif, fontSize: 26 }}>Sankalp</span>
-        <span style={{ fontSize: 10, letterSpacing: ".42em", color: "var(--sage)", marginTop: 4 }}>
-          A Y U R V E D A
+      <Link href="/" style={{ display: "flex", alignItems: "center", gap: 11, color: "var(--green)" }}>
+        <Logo size={32} />
+        <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+          <span style={{ fontFamily: serif, fontSize: 26 }}>Sankalp</span>
+          <span style={{ fontSize: 10, letterSpacing: ".42em", color: "var(--sage)", marginTop: 4 }}>
+            A Y U R V E D A
+          </span>
         </span>
       </Link>
 
