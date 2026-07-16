@@ -257,6 +257,8 @@ export const CONTACT = {
   phoneSecondary: { display: "81601 30003", tel: "8160130003" },
   email: "ap41899@gmail.com",
   address: ["Nr. Bus Stop, Upera Village", "Ta. Unjha, Dist. Mehsana", "Gujarat, India"],
+  /** Single-line address, as listed on the clinic's Google Business profile. */
+  addressInline: "Nr. Bus Stop, Upera, Ta. Unjha, Dist. Mehsana",
   hours: "Mon–Sat · 9:00 AM – 7:00 PM",
 };
 

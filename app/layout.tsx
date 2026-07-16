@@ -39,7 +39,7 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 export const metadata: Metadata = {
   title: "Sankalp Ayurved Clinic · Where Tradition Meets Healing",
   description:
-    "Authentic Panchakarma therapies in a pure, natural setting — rooted in 5,000 years of Ayurvedic wisdom, at Sankalp Ayurved Clinic, Unjha. Consult Dr. Ashish J. Prajapati (B.A.M.S).",
+    "Authentic Panchakarma therapies in a pure, natural setting — rooted in 5,000 years of Ayurvedic wisdom, at Sankalp Ayurved Clinic — Nr. Bus Stop, Upera, Ta. Unjha, Dist. Mehsana. Consult Dr. Ashish J. Prajapati (B.A.M.S).",
   keywords: [
     "Ayurveda",
     "Panchakarma",

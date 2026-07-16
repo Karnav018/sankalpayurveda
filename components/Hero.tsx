@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CONTACT } from "@/lib/data";
 import { serif, gujarati, devanagari, sans } from "@/lib/fonts";
 
 export default function Hero() {
@@ -76,7 +77,7 @@ export default function Hero() {
           }}
         >
           Authentic Panchakarma therapies in a pure, natural setting — rooted in 5,000 years of
-          Ayurvedic wisdom, at Sankalp Ayurved Clinic, Unjha.
+          Ayurvedic wisdom, at Sankalp Ayurved Clinic — {CONTACT.addressInline}.
         </p>
         <div
           style={{
