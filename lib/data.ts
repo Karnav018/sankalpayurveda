@@ -54,6 +54,7 @@ export const treatments: Treatment[] = [
       "Precise thermal cautery — a time-tested remedy for chronic joint & nerve pain.",
     image:
       "https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=75",
+    localImage: "/clinic/agnikarma.jpg",
   },
   {
     sanskrit: "अभ्यंग",
