@@ -1,5 +1,16 @@
 // Static content for the Sankalp home page.
 
+/**
+ * Anchor id for a therapy, e.g. "Cupping Therapy" -> "cupping-therapy".
+ * Used to deep-link a Home treatment card to its section on /treatments.
+ */
+export const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 export type Treatment = {
   sanskrit: string;
   name: string;
@@ -58,9 +69,9 @@ export const treatments: Treatment[] = [
   },
   {
     sanskrit: "अभ्यंग",
-    name: "Abhyanga & Swedana",
+    name: "Abhyanga",
     blurb:
-      "Warm-oil massage & herbal steam — deep relaxation and detoxification.",
+      "Warm medicated-oil full-body massage — deep relaxation and detoxification.",
     image:
       "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=800&q=75",
   },
@@ -350,7 +361,7 @@ export const bookingTreatmentOptions = [
   "Basti",
   "Cupping Therapy",
   "Agnikarma",
-  "Abhyanga & Swedana",
+  "Abhyanga",
   "Skin / allergy care",
   "Joint & spine (Vata)",
   "Gynecology",

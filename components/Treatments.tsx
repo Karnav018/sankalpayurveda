@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { treatments } from "@/lib/data";
+import { treatments, slugify } from "@/lib/data";
 import { serif, devanagari } from "@/lib/fonts";
 
 export default function Treatments() {
@@ -32,7 +32,7 @@ export default function Treatments() {
         {treatments.map((t) => (
           <Link
             key={t.name}
-            href="/treatments"
+            href={`/treatments#${slugify(t.name)}`}
             data-reveal
             className="tcard"
             style={{

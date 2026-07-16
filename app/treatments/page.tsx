@@ -5,7 +5,7 @@ import MobileMenu from "@/components/MobileMenu";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
-import { therapyDetails, otherServices } from "@/lib/data";
+import { therapyDetails, otherServices, slugify } from "@/lib/data";
 import { serif, devanagari } from "@/lib/fonts";
 
 export const metadata: Metadata = {
@@ -59,8 +59,9 @@ export default function TreatmentsPage() {
             return (
               <div
                 key={t.name}
+                id={slugify(t.name)}
                 data-reveal
-                className="therapy-row"
+                className="therapy-row anchor-target"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
@@ -171,7 +172,9 @@ export default function TreatmentsPage() {
             {otherServices.map((s) => (
               <div
                 key={s.name}
+                id={slugify(s.name)}
                 data-reveal
+                className="anchor-target"
                 style={{ border: "1px solid rgba(216,199,154,.25)", borderRadius: 8, padding: 28 }}
               >
                 <div style={{ fontFamily: serif, fontSize: 24, marginBottom: 8 }}>{s.name}</div>
