@@ -6,7 +6,8 @@ Ayurvedic stock image, so nothing ever looks broken.
 
 | Filename                     | Where it appears                                              | Suggested source photo                     |
 | ---------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
-| `therapy-room.jpg`           | Home → Shirodhara card, Treatments → Shirodhara row          | The treatment room with the shirodhara stand + medicine shelves |
+| `therapy-room.jpg`           | Treatments → page hero                                       | The treatment room with the shirodhara stand + medicine shelves |
+| `shirodhara.jpg`             | Home → Shirodhara card, Treatments → Shirodhara row          | Oil streaming from the brass vessel onto the forehead |
 | `consultation.jpg`           | About → "A treatment center for pure, natural healing" image | The doctor's consultation room (desk, certificates) |
 | `exterior.jpg`               | Contact → "Visit us" band                                    | The clinic building with the Sankalp signboard |
 | `doctor.jpg`                 | Home → physician section, About → physician section          | Dr. Ashish's headshot / portrait           |

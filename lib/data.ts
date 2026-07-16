@@ -21,7 +21,7 @@ export const treatments: Treatment[] = [
       "A steady stream of warm medicated oil on the forehead — for stress, insomnia & mental clarity.",
     image:
       "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=75",
-    localImage: "/clinic/therapy-room.jpg",
+    localImage: "/clinic/shirodhara.jpg",
   },
   {
     sanskrit: "नस्य",
@@ -278,7 +278,7 @@ export const therapyDetails: TherapyDetail[] = [
     name: "Shirodhara",
     sanskrit: "शिरोधारा",
     image: "1556760544-74068565f05c",
-    localImage: "/clinic/therapy-room.jpg",
+    localImage: "/clinic/shirodhara.jpg",
     desc: "A continuous stream of medicated oil or liquid poured onto the forehead, by classical Ayurvedic method.",
     uses: ["Mental stress", "Insomnia", "Blood pressure", "Neurological disorders", "Hair fall & dandruff", "Better concentration"],
   },

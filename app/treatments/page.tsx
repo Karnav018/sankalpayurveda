@@ -24,7 +24,7 @@ export default function TreatmentsPage() {
           kicker="पञ्चकर्म चिकित्सा"
           title="Treatments & Therapies"
           subtitle="Classical Panchakarma and specialised therapies for old and stubborn ailments — each tailored to your constitution."
-          image="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?auto=format&fit=crop&w=1700&q=80"
+          image="/clinic/therapy-room.jpg"
           height="64vh"
           minHeight={460}
           overlay="linear-gradient(rgba(28,40,31,.55),rgba(28,40,31,.8))"
