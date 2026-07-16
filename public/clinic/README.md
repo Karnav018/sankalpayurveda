@@ -10,6 +10,8 @@ Ayurvedic stock image, so nothing ever looks broken.
 | `consultation.jpg`           | About → "A treatment center for pure, natural healing" image | The doctor's consultation room (desk, certificates) |
 | `exterior.jpg`               | Contact → "Visit us" band                                    | The clinic building with the Sankalp signboard |
 | `doctor.jpg`                 | Home → physician section, About → physician section          | Dr. Ashish's headshot / portrait           |
+| `kati-basti.jpg`             | Treatments → Kati Basti row                                  | Dough ring on the lower back, oil being poured in |
+| `janu-basti.jpg`             | Treatments → Janu Basti row                                  | Dough rings holding oil over the knees     |
 
 ## Tips
 - **Landscape orientation** works best (roughly 3:2 or 4:3). Portrait photos get
