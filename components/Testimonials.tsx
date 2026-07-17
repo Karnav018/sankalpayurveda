@@ -58,7 +58,7 @@ export default function Testimonials() {
             </p>
             <div style={{ fontFamily: serif, fontSize: 19, color: "var(--green)" }}>{t.name}</div>
             <div style={{ fontSize: 13, color: "var(--gold-brown)", letterSpacing: ".04em", marginTop: 2 }}>
-              ⚲ {t.place}
+              ★ {t.source}
             </div>
           </div>
         ))}

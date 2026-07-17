@@ -82,45 +82,44 @@ export const treatments: Treatment[] = [
 export type Testimonial = {
   quote: string;
   name: string;
-  place: string;
+  source: string;
 };
 
+// Verbatim quotes from the clinic's public Google reviews.
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "After years of back pain, the cupping and Basti therapy gave me relief no medicine ever did.",
-    name: "Rameshbhai P.",
-    place: "Unjha",
+      "I had a great experience at Sankalp Ayurveda Hospital. I consulted Dr. Ashish Prajapati for my skin treatment, and the results are amazing. There is a noticeable improvement in my skin condition. Thank you for the excellent care!",
+    name: "Heena Desai",
+    source: "Google Review",
   },
   {
     quote:
-      "My migraine attacks reduced dramatically after Nasya treatment. Truly grateful to Dr. Ashish.",
-    name: "Nita Patel",
-    place: "Visnagar",
+      "Nice clinic to cure many skin allergies and problems, and also good consultant for good health, and it is AYURVEDIC, means no side effects.",
+    name: "Usha Oza",
+    source: "Google Review",
   },
   {
     quote:
-      "Shirodhara helped my sleep and anxiety like nothing else. A calm, caring clinic.",
-    name: "Kiran Shah",
-    place: "Sidhpur",
+      "Very carring treatment and staff, doctor kindly respond to patients.. I really liked that....👍",
+    name: "Prajapati Tejal",
+    source: "Google Review",
   },
   {
     quote:
-      "My son's immunity improved with Suvarnaprashan. We travel from Patan every month.",
-    name: "Bhavna Prajapati",
-    place: "Patan",
+      "It’s a Very Good Experience. A must visit Place for Punch-Karma. Wonderful Experience.",
+    name: "Daman Patel",
+    source: "Google Review",
   },
   {
-    quote:
-      "A chronic skin allergy cleared up within weeks. Genuine, honest Ayurvedic care.",
-    name: "Mahesh Chaudhary",
-    place: "Mehsana",
+    quote: "Nice place for ayurvedic treatment.",
+    name: "Patel Jay",
+    source: "Google Review",
   },
   {
-    quote:
-      "Joint pain that troubled me for years is finally manageable. I recommend Sankalp to everyone.",
-    name: "Savita Ben",
-    place: "Vadnagar",
+    quote: "Good place for ayurvedic treatment.",
+    name: "Valmiki Jayesh",
+    source: "Google Review",
   },
 ];
 
