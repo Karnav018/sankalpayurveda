@@ -58,6 +58,7 @@ export const treatments: Treatment[] = [
       "Vacuum-cup therapy — for spine & muscle pain, eczema and skin conditions.",
     image:
       "https://images.unsplash.com/photo-1745327883389-17150e99dcf7?auto=format&fit=crop&w=800&q=75",
+    localImage: "/clinic/cupping.jpg",
   },
   {
     sanskrit: "अग्निकर्म",
@@ -343,6 +344,7 @@ export const therapyDetails: TherapyDetail[] = [
     name: "Cupping Therapy",
     sanskrit: "कपिंग",
     image: "1745327883389-17150e99dcf7",
+    localImage: "/clinic/cupping.jpg",
     desc: "A vacuum created on the skin with special cups to draw out stagnation and ease pain.",
     uses: ["Lower back & neck spine pain", "Muscle pain", "Eczema & fungal spots", "Facial wrinkles & loose skin"],
   },
