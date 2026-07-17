@@ -49,7 +49,7 @@ export const treatments: Treatment[] = [
       "Medicated enema therapy — for constipation, lower-back pain, slipped disc & Vata disorders.",
     image:
       "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=75",
-    localImage: "/clinic/kati-basti.jpg",
+    localImage: "/clinic/basti.jpg",
   },
   {
     sanskrit: "कपिंग",
@@ -57,7 +57,7 @@ export const treatments: Treatment[] = [
     blurb:
       "Vacuum-cup therapy — for spine & muscle pain, eczema and skin conditions.",
     image:
-      "https://images.unsplash.com/photo-1611072172377-0cabc3addb30?auto=format&fit=crop&w=800&q=75",
+      "https://images.unsplash.com/photo-1745327883389-17150e99dcf7?auto=format&fit=crop&w=800&q=75",
   },
   {
     sanskrit: "अग्निकर्म",
@@ -305,6 +305,7 @@ export const therapyDetails: TherapyDetail[] = [
     name: "Basti",
     sanskrit: "बस्ति",
     image: "1602928321679-560bb453f190",
+    localImage: "/clinic/basti.jpg",
     desc: "Medicated liquids or oils introduced through the rectum, tailored to disease and constitution.",
     uses: ["Constipation", "Lower-back pain", "Slipped disc", "Vata joint pains", "Headaches"],
   },
@@ -341,7 +342,7 @@ export const therapyDetails: TherapyDetail[] = [
   {
     name: "Cupping Therapy",
     sanskrit: "कपिंग",
-    image: "1611072172377-0cabc3addb30",
+    image: "1745327883389-17150e99dcf7",
     desc: "A vacuum created on the skin with special cups to draw out stagnation and ease pain.",
     uses: ["Lower back & neck spine pain", "Muscle pain", "Eczema & fungal spots", "Facial wrinkles & loose skin"],
   },
