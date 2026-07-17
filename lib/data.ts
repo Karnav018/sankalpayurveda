@@ -49,6 +49,7 @@ export const treatments: Treatment[] = [
       "Medicated enema therapy — for constipation, lower-back pain, slipped disc & Vata disorders.",
     image:
       "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=75",
+    localImage: "/clinic/kati-basti.jpg",
   },
   {
     sanskrit: "कपिंग",
