@@ -268,6 +268,8 @@ export const doshaInfo: Record<Dosha, DoshaInfo> = {
 export const CONTACT = {
   phonePrimary: { display: "98241 22016", tel: "9824122016" },
   phoneSecondary: { display: "81601 30003", tel: "8160130003" },
+  /** International format (country code, no +) for wa.me chat links. */
+  whatsapp: "918160130003",
   email: "ap41899@gmail.com",
   address: ["Nr. Bus Stop, Upera Village", "Ta. Unjha, Dist. Mehsana", "Gujarat, India"],
   /** Single-line address, as listed on the clinic's Google Business profile. */

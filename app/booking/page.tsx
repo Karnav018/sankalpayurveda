@@ -9,7 +9,7 @@ import { serif, devanagari, gujarati } from "@/lib/fonts";
 export const metadata: Metadata = {
   title: "Book an Appointment · Sankalp Ayurved Clinic",
   description:
-    "Request a consultation with Dr. Ashish J. Prajapati at Sankalp Ayurved Clinic, Unjha. Share a few details and we'll confirm by phone. Or call 98241 22016.",
+    "Request a consultation with Dr. Ashish J. Prajapati at Sankalp Ayurved Clinic, Unjha. Share a few details and we'll confirm by phone. Or call 81601 30003.",
 };
 
 export default function BookingPage() {
