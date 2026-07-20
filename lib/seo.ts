@@ -68,12 +68,6 @@ export const siteGraphJsonLd = {
           "@type": "ContactPoint",
           telephone: `+91${CONTACT.phonePrimary.tel}`,
           contactType: "appointments",
-          availableLanguage: ["Gujarati", "Hindi", "English"],
-        },
-        {
-          "@type": "ContactPoint",
-          telephone: `+91${CONTACT.phoneSecondary.tel}`,
-          contactType: "appointments",
           url: `https://wa.me/${CONTACT.whatsapp}`,
           availableLanguage: ["Gujarati", "Hindi", "English"],
         },

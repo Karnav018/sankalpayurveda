@@ -260,8 +260,8 @@ export default function BookingForm() {
       </button>
       <p style={{ fontSize: 13, color: "var(--sage)", textAlign: "center", margin: "16px 0 0" }}>
         Opens WhatsApp with your details filled in — just press send. Or call us at{" "}
-        <a href={`tel:${CONTACT.phoneSecondary.tel}`} style={{ color: "var(--green)", borderBottom: "1px solid var(--gold-deep)" }}>
-          {CONTACT.phoneSecondary.display}
+        <a href={`tel:${CONTACT.phonePrimary.tel}`} style={{ color: "var(--green)", borderBottom: "1px solid var(--gold-deep)" }}>
+          {CONTACT.phonePrimary.display}
         </a>
       </p>
     </div>

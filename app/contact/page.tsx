@@ -11,7 +11,7 @@ import { serif, devanagari, gujarati } from "@/lib/fonts";
 import { breadcrumbJsonLd, OG_IMAGE, SITE_URL } from "@/lib/seo";
 
 const description =
-  "Visit Sankalp Ayurved Clinic near the bus stop, Upera Village, Ta. Unjha, Dist. Mehsana. Call 98241 22016 / 81601 30003. Mon–Sat, 9 AM – 7 PM.";
+  "Visit Sankalp Ayurved Clinic near the bus stop, Upera Village, Ta. Unjha, Dist. Mehsana. Call or WhatsApp 81601 30003. Mon–Sat, 9 AM – 7 PM.";
 
 export const metadata: Metadata = {
   title: "Visit & Contact",
@@ -108,8 +108,6 @@ export default function ContactPage() {
               <div style={iconStyle}>☏</div>
               <div style={labelStyle}>CALL / WHATSAPP</div>
               <div style={{ fontWeight: 300, fontSize: 17, lineHeight: 1.9, color: "#3A4A3C" }}>
-                <a href={`tel:${CONTACT.phoneSecondary.tel}`}>{CONTACT.phoneSecondary.display}</a>
-                <br />
                 <a href={`tel:${CONTACT.phonePrimary.tel}`}>{CONTACT.phonePrimary.display}</a>
               </div>
             </div>

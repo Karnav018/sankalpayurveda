@@ -266,8 +266,8 @@ export const doshaInfo: Record<Dosha, DoshaInfo> = {
 };
 
 export const CONTACT = {
-  phonePrimary: { display: "98241 22016", tel: "9824122016" },
-  phoneSecondary: { display: "81601 30003", tel: "8160130003" },
+  phonePrimary: { display: "81601 30003", tel: "8160130003" },
+  phoneSecondary: { display: "98241 22016", tel: "9824122016" },
   /** International format (country code, no +) for wa.me chat links. */
   whatsapp: "918160130003",
   email: "ap41899@gmail.com",

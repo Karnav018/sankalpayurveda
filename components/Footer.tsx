@@ -57,7 +57,6 @@ export default function Footer() {
             Ta. Unjha, Dist. Mehsana
             <br />
             <br />
-            <a href={`tel:${CONTACT.phoneSecondary.tel}`}>{CONTACT.phoneSecondary.display}</a> ·{" "}
             <a href={`tel:${CONTACT.phonePrimary.tel}`}>{CONTACT.phonePrimary.display}</a>
             <br />
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>

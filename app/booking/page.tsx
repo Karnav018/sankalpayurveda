@@ -102,7 +102,7 @@ export default function BookingPage() {
                 <div>
                   <div style={{ fontSize: 12, letterSpacing: ".1em", opacity: 0.7 }}>CALL / WHATSAPP</div>
                   <div style={{ fontFamily: serif, fontSize: 20 }}>
-                    {CONTACT.phonePrimary.display} · {CONTACT.phoneSecondary.display}
+                    {CONTACT.phonePrimary.display}
                   </div>
                 </div>
               </div>
