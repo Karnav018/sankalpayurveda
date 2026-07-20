@@ -5,18 +5,42 @@ import MobileMenu from "@/components/MobileMenu";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
+import JsonLd from "@/components/JsonLd";
 import { therapyDetails, otherServices, slugify } from "@/lib/data";
 import { serif, devanagari } from "@/lib/fonts";
+import { breadcrumbJsonLd, therapyCatalogJsonLd, OG_IMAGE } from "@/lib/seo";
+
+const description =
+  "Classical Panchakarma and specialised therapies at Sankalp Ayurved — Shirodhara, Nasya, Basti, Cupping, Agnikarma and more, each tailored to your constitution.";
 
 export const metadata: Metadata = {
-  title: "Treatments & Therapies · Sankalp Ayurved Clinic",
-  description:
-    "Classical Panchakarma and specialised therapies at Sankalp Ayurved — Shirodhara, Nasya, Basti, Cupping, Agnikarma and more, each tailored to your constitution.",
+  title: "Treatments & Therapies",
+  description,
+  alternates: { canonical: "/treatments" },
+  openGraph: {
+    type: "website",
+    url: "/treatments",
+    title: "Treatments & Therapies at Sankalp Ayurved Clinic",
+    description,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Treatments & Therapies at Sankalp Ayurved Clinic",
+    description,
+  },
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Treatments & Therapies", path: "/treatments" },
+]);
 
 export default function TreatmentsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs} />
+      <JsonLd data={therapyCatalogJsonLd} />
       <Nav active="/treatments" />
       <MobileMenu />
       <main>

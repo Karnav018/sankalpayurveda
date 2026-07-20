@@ -5,18 +5,46 @@ import MobileMenu from "@/components/MobileMenu";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
+import JsonLd from "@/components/JsonLd";
 import { CONTACT } from "@/lib/data";
 import { serif, devanagari, gujarati } from "@/lib/fonts";
+import { breadcrumbJsonLd, OG_IMAGE, SITE_URL } from "@/lib/seo";
+
+const description =
+  "Visit Sankalp Ayurved Clinic near the bus stop, Upera Village, Ta. Unjha, Dist. Mehsana. Call 98241 22016 / 81601 30003. Mon–Sat, 9 AM – 7 PM.";
 
 export const metadata: Metadata = {
-  title: "Visit & Contact · Sankalp Ayurved Clinic",
-  description:
-    "Visit Sankalp Ayurved Clinic near the bus stop, Upera Village, Ta. Unjha, Dist. Mehsana. Call 98241 22016 / 81601 30003. Mon–Sat, 9 AM – 7 PM.",
+  title: "Visit & Contact",
+  description,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    url: "/contact",
+    title: "Visit & Contact Sankalp Ayurved Clinic",
+    description,
+    images: [OG_IMAGE],
+  },
+  twitter: { card: "summary_large_image", title: "Visit & Contact Sankalp Ayurved Clinic", description },
+};
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Visit & Contact", path: "/contact" },
+]);
+
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Visit & Contact Sankalp Ayurved Clinic",
+  url: `${SITE_URL}/contact`,
+  about: { "@id": `${SITE_URL}/#clinic` },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs} />
+      <JsonLd data={contactPageJsonLd} />
       <Nav active="/contact" />
       <MobileMenu />
       <main>

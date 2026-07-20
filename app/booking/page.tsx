@@ -3,18 +3,41 @@ import BookingHeader from "@/components/BookingHeader";
 import MobileMenu from "@/components/MobileMenu";
 import BookingForm from "@/components/BookingForm";
 import SiteEffects from "@/components/SiteEffects";
+import JsonLd from "@/components/JsonLd";
 import { CONTACT } from "@/lib/data";
 import { serif, devanagari, gujarati } from "@/lib/fonts";
+import { breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
+
+const description =
+  "Request a consultation with Dr. Ashish J. Prajapati at Sankalp Ayurved Clinic, Unjha. Share a few details and we'll confirm by phone. Or call 81601 30003.";
 
 export const metadata: Metadata = {
-  title: "Book an Appointment · Sankalp Ayurved Clinic",
-  description:
-    "Request a consultation with Dr. Ashish J. Prajapati at Sankalp Ayurved Clinic, Unjha. Share a few details and we'll confirm by phone. Or call 81601 30003.",
+  title: "Book an Appointment",
+  description,
+  alternates: { canonical: "/booking" },
+  openGraph: {
+    type: "website",
+    url: "/booking",
+    title: "Book an Appointment at Sankalp Ayurved Clinic",
+    description,
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book an Appointment at Sankalp Ayurved Clinic",
+    description,
+  },
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "Book an Appointment", path: "/booking" },
+]);
 
 export default function BookingPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs} />
       <BookingHeader />
       <MobileMenu />
       <main>

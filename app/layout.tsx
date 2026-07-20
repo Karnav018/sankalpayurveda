@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Cormorant_Garamond,
   Mukta,
@@ -6,6 +6,8 @@ import {
   Noto_Serif_Devanagari,
 } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
+import { OG_IMAGE, SITE_DESCRIPTION, SITE_NAME, SITE_URL, siteGraphJsonLd } from "@/lib/seo";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -37,24 +39,68 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "Sankalp Ayurved Clinic · Where Tradition Meets Healing",
-  description:
-    "Authentic Panchakarma therapies in a pure, natural setting — rooted in 5,000 years of Ayurvedic wisdom, at Sankalp Ayurved Clinic — Nr. Bus Stop, Upera, Ta. Unjha, Dist. Mehsana. Consult Dr. Ashish J. Prajapati (B.A.M.S).",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Sankalp Ayurved Clinic · Where Tradition Meets Healing",
+    template: `%s · ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
   keywords: [
     "Ayurveda",
     "Panchakarma",
     "Sankalp Ayurved",
-    "Unjha",
-    "Mehsana",
+    "Ayurvedic clinic Unjha",
+    "Ayurvedic doctor Mehsana",
     "Shirodhara",
     "Nasya",
     "Basti",
+    "Kati Basti",
+    "Janu Basti",
+    "Cupping therapy",
+    "Agnikarma",
+    "Dr. Ashish Prajapati",
   ],
-  openGraph: {
-    title: "Sankalp Ayurved Clinic",
-    description: "Where tradition meets healing — authentic Ayurvedic care in Unjha, Gujarat.",
-    type: "website",
+  applicationName: SITE_NAME,
+  authors: [{ name: "Sankalp Ayurved Clinic" }],
+  creator: "Sankalp Ayurved Clinic",
+  publisher: "Sankalp Ayurved Clinic",
+  category: "health",
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: SITE_NAME,
+    locale: "en_IN",
+    title: "Sankalp Ayurved Clinic · Where Tradition Meets Healing",
+    description: "Where tradition meets healing — authentic Ayurvedic care in Unjha, Gujarat.",
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sankalp Ayurved Clinic · Where Tradition Meets Healing",
+    description: "Where tradition meets healing — authentic Ayurvedic care in Unjha, Gujarat.",
+    images: [OG_IMAGE.url],
+  },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#2e4034",
 };
 
 export default function RootLayout({
@@ -67,6 +113,7 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${mukta.variable} ${muktaVaani.variable} ${notoSerifDevanagari.variable}`}
       >
+        <JsonLd data={siteGraphJsonLd} />
         {children}
       </body>
     </html>

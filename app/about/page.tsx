@@ -6,13 +6,31 @@ import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
 import DoctorPortrait from "@/components/DoctorPortrait";
+import JsonLd from "@/components/JsonLd";
 import { serif, devanagari, gujarati } from "@/lib/fonts";
+import { breadcrumbJsonLd, OG_IMAGE } from "@/lib/seo";
+
+const description =
+  "Sankalp Ayurved Clinic — a treatment center for pure, natural healing led by Dr. Ashish J. Prajapati (B.A.M.S), treating old and stubborn diseases with classical Panchakarma.";
 
 export const metadata: Metadata = {
-  title: "About the Clinic · Sankalp Ayurved",
-  description:
-    "Sankalp Ayurved Clinic — a treatment center for pure, natural healing led by Dr. Ashish J. Prajapati (B.A.M.S), treating old and stubborn diseases with classical Panchakarma.",
+  title: "About the Clinic",
+  description,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    type: "website",
+    url: "/about",
+    title: "About Sankalp Ayurved Clinic",
+    description,
+    images: [OG_IMAGE],
+  },
+  twitter: { card: "summary_large_image", title: "About Sankalp Ayurved Clinic", description },
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", path: "/" },
+  { name: "About the Clinic", path: "/about" },
+]);
 
 const values = [
   {
@@ -42,6 +60,7 @@ const specialties = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs} />
       <Nav active="/about" />
       <MobileMenu />
       <main>
