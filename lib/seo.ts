@@ -2,11 +2,11 @@ import { CONTACT, therapyDetails, otherServices } from "./data";
 
 /**
  * Canonical origin for every absolute URL the site emits (canonicals, sitemap,
- * Open Graph, JSON-LD). Override with NEXT_PUBLIC_SITE_URL when the custom
- * domain goes live — nothing else needs to change.
+ * Open Graph, JSON-LD). Override with NEXT_PUBLIC_SITE_URL if the domain
+ * ever changes — nothing else needs to change.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sankalpayurveda-weld.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sankalpayurved.in"
 ).replace(/\/+$/, "");
 
 export const SITE_NAME = "Sankalp Ayurved Clinic";
