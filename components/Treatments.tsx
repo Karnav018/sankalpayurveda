@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { treatments, slugify } from "@/lib/data";
-import { serif, devanagari } from "@/lib/fonts";
+import { serif, devanagari, gujarati } from "@/lib/fonts";
 
 export default function Treatments() {
   return (
@@ -26,6 +26,17 @@ export default function Treatments() {
         >
           Classical treatments, thoughtfully delivered
         </h2>
+        <p
+          style={{
+            fontFamily: gujarati,
+            fontSize: "clamp(16px,2vw,20px)",
+            color: "var(--gold)",
+            margin: "12px 0 0",
+            opacity: 0.85,
+          }}
+        >
+          શાસ્ત્રીય ચિકિત્સા, વિચારપૂર્વક આપવામાં આવે છે
+        </p>
       </div>
 
       <div className="grid-3">
@@ -71,9 +82,14 @@ export default function Treatments() {
               >
                 {t.sanskrit}
               </div>
-              <div style={{ fontFamily: serif, fontSize: 28 }}>{t.name}</div>
+              <div style={{ fontFamily: serif, fontSize: 28 }}>
+                {t.name} <span style={{ fontFamily: gujarati, fontSize: 22, opacity: 0.8 }}>/ {t.name_gu}</span>
+              </div>
               <p style={{ fontWeight: 300, fontSize: 14, lineHeight: 1.6, opacity: 0.85, margin: "8px 0 0" }}>
                 {t.blurb}
+              </p>
+              <p style={{ fontFamily: gujarati, fontWeight: 300, fontSize: 13, lineHeight: 1.6, opacity: 0.7, margin: "4px 0 0" }}>
+                {t.blurb_gu}
               </p>
             </div>
           </Link>
