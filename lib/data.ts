@@ -14,10 +14,10 @@ export const slugify = (name: string) =>
 export type Treatment = {
   sanskrit: string;
   name: string;
+  name_gu: string;
   blurb: string;
+  blurb_gu: string;
   image: string;
-  /** Optional clinic photo in public/clinic/. Shown on top of `image` when the
-   *  file exists; falls back to `image` if it's missing (no broken image). */
   localImage?: string;
 };
 
@@ -28,8 +28,11 @@ export const treatments: Treatment[] = [
   {
     sanskrit: "शिरोधारा",
     name: "Shirodhara",
+    name_gu: "શિરોધારા",
     blurb:
       "A steady stream of warm medicated oil on the forehead — for stress, insomnia & mental clarity.",
+    blurb_gu:
+      "કપાળ પર ગરમ ઔષધીય તેલનો સ્થિર પ્રવાહ — તણાવ, અનિદ્રા અને માનસિક સ્પષ્ટતા માટે.",
     image:
       "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=75",
     localImage: "/clinic/shirodhara.jpg",
@@ -37,16 +40,22 @@ export const treatments: Treatment[] = [
   {
     sanskrit: "नस्य",
     name: "Nasya",
+    name_gu: "નસ્ય",
     blurb:
       "Herbal medication through the nasal passage — for sinus, migraine, allergies & hair problems.",
+    blurb_gu:
+      "નાકના માર્ગ દ્વારા ઔષધીય ઉપચાર — સાઇનસ, આધાશીશી, એલર્જી અને વાળની સમસ્યા માટે.",
     image:
       "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=75",
   },
   {
     sanskrit: "बस्ति",
     name: "Basti",
+    name_gu: "બસ્તિ",
     blurb:
       "Medicated enema therapy — for constipation, lower-back pain, slipped disc & Vata disorders.",
+    blurb_gu:
+      "ઔષધીય એનિમા ચિકિત્સા — કબજિયાત, કમરનો દુખાવો, સ્લિપ ડિસ્ક અને વાત વિકારો માટે.",
     image:
       "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=800&q=75",
     localImage: "/clinic/basti.jpg",
@@ -54,8 +63,11 @@ export const treatments: Treatment[] = [
   {
     sanskrit: "कपिंग",
     name: "Cupping Therapy",
+    name_gu: "કપિંગ થેરાપી",
     blurb:
       "Vacuum-cup therapy — for spine & muscle pain, eczema and skin conditions.",
+    blurb_gu:
+      "વેક્યુમ-કપ ચિકિત્સા — કરોડરજ્જુ અને સ્નાયુના દુખાવા, ખરજવું અને ચામડીના રોગો માટે.",
     image:
       "https://images.unsplash.com/photo-1745327883389-17150e99dcf7?auto=format&fit=crop&w=800&q=75",
     localImage: "/clinic/cupping.jpg",
@@ -63,8 +75,11 @@ export const treatments: Treatment[] = [
   {
     sanskrit: "अग्निकर्म",
     name: "Agnikarma",
+    name_gu: "અગ્નિકર્મ",
     blurb:
       "Precise thermal cautery — a time-tested remedy for chronic joint & nerve pain.",
+    blurb_gu:
+      "ચોક્કસ થર્મલ દાગ — લાંબા સમયના સાંધા અને ચેતાના દુખાવા માટે સમય-પરીક્ષિત ઉપાય.",
     image:
       "https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=75",
     localImage: "/clinic/agnikarma.jpg",
@@ -72,8 +87,11 @@ export const treatments: Treatment[] = [
   {
     sanskrit: "अभ्यंग",
     name: "Abhyanga",
+    name_gu: "અભ્યંગ",
     blurb:
       "Warm medicated-oil full-body massage — deep relaxation and detoxification.",
+    blurb_gu:
+      "ગરમ ઔષધીય તેલથી આખા શરીરની માલિશ — ઊંડો આરામ અને શરીરની શુદ્ધિ.",
     image:
       "https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&w=800&q=75",
   },
@@ -280,43 +298,57 @@ export const CONTACT = {
 // ===== Treatments page: detailed therapy rows =====
 export type TherapyDetail = {
   name: string;
+  name_gu: string;
   sanskrit: string;
-  image: string; // unsplash photo id
+  image: string;
   desc: string;
+  desc_gu: string;
   uses: string[];
-  localImage?: string; // optional clinic photo (public/clinic/), with `image` as fallback
+  uses_gu: string[];
+  localImage?: string;
 };
 
 export const therapyDetails: TherapyDetail[] = [
   {
     name: "Shirodhara",
+    name_gu: "શિરોધારા",
     sanskrit: "शिरोधारा",
     image: "1556760544-74068565f05c",
     localImage: "/clinic/shirodhara.jpg",
     desc: "A continuous stream of medicated oil or liquid poured onto the forehead, by classical Ayurvedic method.",
+    desc_gu: "શાસ્ત્રીય આયુર્વેદિક પદ્ધતિ દ્વારા કપાળ પર ઔષધીય તેલ કે પ્રવાહીનો સતત પ્રવાહ.",
     uses: ["Mental stress", "Insomnia", "Blood pressure", "Neurological disorders", "Hair fall & dandruff", "Better concentration"],
+    uses_gu: ["માનસિક તણાવ", "અનિદ્રા", "બ્લડ પ્રેશર", "ન્યુરોલોજિકલ વિકારો", "વાળ ખરવા અને ખોડો", "એકાગ્રતામાં સુધારો"],
   },
   {
     name: "Nasya",
+    name_gu: "નસ્ય",
     sanskrit: "नस्य",
     image: "1512290923902-8a9f81dc236c",
     desc: "Medicine administered through the nasal passage using herbs or medicated ghee/oil.",
+    desc_gu: "જડીબુટ્ટી અથવા ઔષધીય ઘી/તેલ દ્વારા નાકના માર્ગે આપવામાં આવતી દવા.",
     uses: ["Frequent colds", "Allergies", "Headache & migraine", "Sinus pain", "Hair problems", "Facial pain / paralysis", "Hoarse voice"],
+    uses_gu: ["વારંવાર શરદી", "એલર્જી", "માથાનો દુખાવો અને આધાશીશી", "સાઇનસ", "વાળની સમસ્યા", "ચહેરાનો દુખાવો / લકવો", "ઘોઘરો અવાજ"],
   },
   {
     name: "Basti",
+    name_gu: "બસ્તિ",
     sanskrit: "बस्ति",
     image: "1602928321679-560bb453f190",
     localImage: "/clinic/basti.jpg",
     desc: "Medicated liquids or oils introduced through the rectum, tailored to disease and constitution.",
+    desc_gu: "રોગ અને પ્રકૃતિ અનુસાર ગુદામાર્ગે ઔષધીય પ્રવાહી અથવા તેલ આપવામાં આવે છે.",
     uses: ["Constipation", "Lower-back pain", "Slipped disc", "Vata joint pains", "Headaches"],
+    uses_gu: ["કબજિયાત", "કમરનો દુખાવો", "સ્લિપ ડિસ્ક", "વાત સાંધાના દુખાવા", "માથાનો દુખાવો"],
   },
   {
     name: "Kati Basti",
+    name_gu: "કટિ બસ્તિ",
     sanskrit: "कटि बस्ति",
     image: "1608571423902-eed4a5ad8108",
     localImage: "/clinic/kati-basti.jpg",
     desc: "An external basti: warm medicated oil is held in a dough well built over the lower back and kept for 30–45 minutes, soaking deep into the lumbar tissues. (Kati = lower back, Basti = to retain.)",
+    desc_gu: "બાહ્ય બસ્તિ: કમરના ભાગ પર લોટની દીવાલ બનાવી તેમાં ગરમ ઔષધીય તેલ 30–45 મિનિટ રાખવામાં આવે છે, જે ઊંડા સ્નાયુઓમાં ઊતરે છે.",
     uses: [
       "Chronic lower-back pain",
       "Sciatica (Gridhrasi)",
@@ -325,13 +357,23 @@ export const therapyDetails: TherapyDetail[] = [
       "Muscle stiffness & spasm",
       "Soothes nerves of back & legs",
     ],
+    uses_gu: [
+      "લાંબા સમયનો કમરનો દુખાવો",
+      "સાયટિકા (ગૃધ્રસી)",
+      "સ્લિપ અને ડિજનરેટિવ ડિસ્ક",
+      "લમ્બર સ્પોન્ડિલોસિસ",
+      "સ્નાયુની જકડન અને ખેંચાણ",
+      "પગ અને કમરની ચેતાને આરામ",
+    ],
   },
   {
     name: "Janu Basti",
+    name_gu: "જાનુ બસ્તિ",
     sanskrit: "जानु बस्ति",
     image: "1519824145371-296894a0daa9",
     localImage: "/clinic/janu-basti.jpg",
     desc: "The same oil-pooling method applied over the knee joint — nourishing the joint and improving its natural lubrication. (Janu = knee.)",
+    desc_gu: "ઘૂંટણના સાંધા પર તેલ ભરવાની એ જ પદ્ધતિ — સાંધાને પોષણ આપે છે અને કુદરતી લુબ્રિકેશન સુધારે છે.",
     uses: [
       "Knee osteoarthritis (Sandhigata Vata)",
       "Chronic knee pain",
@@ -340,22 +382,33 @@ export const therapyDetails: TherapyDetail[] = [
       "Cartilage & ligament care",
       "Post-injury recovery",
     ],
+    uses_gu: [
+      "ઘૂંટણનો સંધિવા (સંધિગત વાત)",
+      "લાંબા સમયનો ઘૂંટણનો દુખાવો",
+      "સાંધાની જકડન અને સોજો",
+      "ઘૂંટણની મર્યાદિત હિલચાલ",
+      "કાર્ટિલેજ અને લિગામેન્ટની સંભાળ",
+      "ઈજા પછીનો રિકવરી",
+    ],
   },
   {
     name: "Cupping Therapy",
+    name_gu: "કપિંગ થેરાપી",
     sanskrit: "कपिंग",
     image: "1745327883389-17150e99dcf7",
     localImage: "/clinic/cupping.jpg",
     desc: "A vacuum created on the skin with special cups to draw out stagnation and ease pain.",
+    desc_gu: "ખાસ કપ વડે ચામડી પર વેક્યુમ બનાવી રક્તસ્થિરતા દૂર કરવી અને દુખાવો ઓછો કરવો.",
     uses: ["Lower back & neck spine pain", "Muscle pain", "Eczema & fungal spots", "Facial wrinkles & loose skin"],
+    uses_gu: ["કમર અને ગરદનનો દુખાવો", "સ્નાયુનો દુખાવો", "ખરજવું અને ફંગલ ડાઘ", "ચહેરાની કરચલીઓ અને ઢીલી ચામડી"],
   },
 ];
 
 export const otherServices = [
-  { name: "Agnikarma", blurb: "Thermal cautery for chronic joint & nerve pain." },
-  { name: "Abhyanga", blurb: "Warm medicated-oil full-body massage." },
-  { name: "Swedana", blurb: "Herbal steam therapy for detox & relief." },
-  { name: "Suvarnaprashan", blurb: "Immunity & intellect drops for children." },
+  { name: "Agnikarma", name_gu: "અગ્નિકર્મ", blurb: "Thermal cautery for chronic joint & nerve pain.", blurb_gu: "લાંબા સમયના સાંધા અને ચેતાના દુખાવા માટે થર્મલ દાગ." },
+  { name: "Abhyanga", name_gu: "અભ્યંગ", blurb: "Warm medicated-oil full-body massage.", blurb_gu: "ગરમ ઔષધીય તેલથી આખા શરીરની માલિશ." },
+  { name: "Swedana", name_gu: "સ્વેદન", blurb: "Herbal steam therapy for detox & relief.", blurb_gu: "ડિટોક્સ અને રાહત માટે ઔષધીય વરાળ ચિકિત્સા." },
+  { name: "Suvarnaprashan", name_gu: "સુવર્ણપ્રાશન", blurb: "Immunity & intellect drops for children.", blurb_gu: "બાળકો માટે રોગપ્રતિકારકતા અને બુદ્ધિના ટીપાં." },
 ];
 
 // Options for the booking form's treatment select

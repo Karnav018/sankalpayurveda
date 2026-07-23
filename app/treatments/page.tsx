@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import SiteEffects from "@/components/SiteEffects";
 import JsonLd from "@/components/JsonLd";
 import { therapyDetails, otherServices, slugify } from "@/lib/data";
-import { serif, devanagari } from "@/lib/fonts";
+import { serif, devanagari, gujarati } from "@/lib/fonts";
 import { breadcrumbJsonLd, therapyCatalogJsonLd, OG_IMAGE } from "@/lib/seo";
 
 const description =
@@ -73,6 +73,17 @@ export default function TreatmentsPage() {
               Every therapy at Sankalp uses authentic, proven Ayurvedic medicines — administered by
               classical methods in a pure, natural setting.
             </p>
+            <p
+              style={{
+                fontFamily: gujarati,
+                fontSize: "clamp(16px,2vw,22px)",
+                lineHeight: 1.5,
+                color: "var(--sage)",
+                margin: "16px 0 0",
+              }}
+            >
+              સંકલ્પની દરેક ચિકિત્સામાં અસલ, પ્રમાણિત આયુર્વેદિક ઔષધો વપરાય છે — શુદ્ધ, કુદરતી વાતાવરણમાં શાસ્ત્રીય પદ્ધતિથી.
+            </p>
           </div>
         </section>
 
@@ -132,7 +143,7 @@ export default function TreatmentsPage() {
                       margin: 0,
                     }}
                   >
-                    {t.name}
+                    {t.name} <span style={{ fontFamily: gujarati, fontSize: "clamp(20px,2.4vw,30px)", opacity: 0.7 }}>/ {t.name_gu}</span>
                   </h3>
                   <p
                     style={{
@@ -141,21 +152,34 @@ export default function TreatmentsPage() {
                       lineHeight: 1.8,
                       color: "#4A5646",
                       maxWidth: "48ch",
-                      margin: "18px 0 22px",
+                      margin: "18px 0 4px",
                     }}
                   >
                     {t.desc}
                   </p>
+                  <p
+                    style={{
+                      fontFamily: gujarati,
+                      fontWeight: 300,
+                      fontSize: "clamp(14px,1.1vw,16px)",
+                      lineHeight: 1.7,
+                      color: "#6B7A65",
+                      maxWidth: "48ch",
+                      margin: "0 0 22px",
+                    }}
+                  >
+                    {t.desc_gu}
+                  </p>
                   <div style={{ fontSize: 11, letterSpacing: ".2em", color: "var(--sage)", marginBottom: 6 }}>
-                    INDICATED FOR
+                    INDICATED FOR / ઉપયોગી
                   </div>
                   <ul style={{ listStyle: "none", margin: 0, padding: 0, columns: 2, columnGap: 32 }}>
-                    {t.uses.map((u) => (
+                    {t.uses.map((u, j) => (
                       <li
                         key={u}
                         style={{
                           display: "flex",
-                          alignItems: "center",
+                          alignItems: "baseline",
                           gap: 10,
                           fontWeight: 300,
                           fontSize: 15,
@@ -170,9 +194,13 @@ export default function TreatmentsPage() {
                             borderRadius: "50%",
                             background: "var(--gold-deep)",
                             flex: "0 0 auto",
+                            position: "relative",
+                            top: -2,
                           }}
                         />
-                        {u}
+                        <span>
+                          {u} <span style={{ fontFamily: gujarati, fontSize: 13, color: "#6B7A65" }}>/ {t.uses_gu[j]}</span>
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -191,6 +219,9 @@ export default function TreatmentsPage() {
             <h2 style={{ fontFamily: serif, fontWeight: 500, fontSize: "clamp(30px,4vw,50px)", margin: 0 }}>
               Specialised care &amp; wellness
             </h2>
+            <p style={{ fontFamily: gujarati, fontSize: "clamp(16px,1.8vw,20px)", color: "var(--gold)", margin: "8px 0 0", opacity: 0.8 }}>
+              વિશેષ સંભાળ અને સ્વાસ્થ્ય
+            </p>
           </div>
           <div className="grid-4">
             {otherServices.map((s) => (
@@ -201,9 +232,14 @@ export default function TreatmentsPage() {
                 className="anchor-target"
                 style={{ border: "1px solid rgba(216,199,154,.25)", borderRadius: 8, padding: 28 }}
               >
-                <div style={{ fontFamily: serif, fontSize: 24, marginBottom: 8 }}>{s.name}</div>
-                <p style={{ fontWeight: 300, fontSize: 14, lineHeight: 1.6, opacity: 0.82, margin: 0 }}>
+                <div style={{ fontFamily: serif, fontSize: 24, marginBottom: 4 }}>
+                  {s.name} <span style={{ fontFamily: gujarati, fontSize: 18, opacity: 0.7 }}>/ {s.name_gu}</span>
+                </div>
+                <p style={{ fontWeight: 300, fontSize: 14, lineHeight: 1.6, opacity: 0.82, margin: "4px 0 0" }}>
                   {s.blurb}
+                </p>
+                <p style={{ fontFamily: gujarati, fontWeight: 300, fontSize: 13, lineHeight: 1.5, opacity: 0.6, margin: "2px 0 0" }}>
+                  {s.blurb_gu}
                 </p>
               </div>
             ))}
@@ -246,6 +282,18 @@ export default function TreatmentsPage() {
               }}
             >
               Dr. Ashish will assess your constitution and recommend the right treatment path.
+            </p>
+            <p
+              style={{
+                fontFamily: gujarati,
+                fontWeight: 300,
+                fontSize: "clamp(14px,1.1vw,16px)",
+                color: "#7A7760",
+                maxWidth: "48ch",
+                margin: "8px auto 0",
+              }}
+            >
+              ડૉ. આશિષ તમારી પ્રકૃતિનું મૂલ્યાંકન કરશે અને યોગ્ય ચિકિત્સા માર્ગ સૂચવશે.
             </p>
             <Link
               href="/booking"
